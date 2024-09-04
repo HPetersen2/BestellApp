@@ -1,7 +1,7 @@
 .dish {
     border: 2px solid #EAEAEA;
-    margin: 12px;
     cursor: pointer;
+    margin-bottom: 12px;
 }
 .dish:hover {
     background-color: #FEE5CB;
