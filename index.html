@@ -3,9 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./scripts/template.js"></script>
+    <script src="./scripts/db.js"></script>
+    <script src="./scripts/script.js"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/standard.css">
+    <link rel="stylesheet" href="./styles/basket.css">
+    <link rel="stylesheet" href="./styles/dish.css">
+    <link rel="icon" type="image/x-icon" href="./assets/fav/favicon.ico">
     <title>BestellApp</title>
 </head>
-<body>
-    
+<body onload="init()">
+    <div class="content">
+        <header>
+            <div class="header-container">
+                <img src="./assets/img/Bestell App- Logo.svg" alt="logo">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
+            </div>
+        </header>
+        <div class="main-container">
+            <div class="home-container">
+                <div class="basket-container">
+                    <div class="basket-headline">
+                        <h2>Warenkorb</h2>
+                    </div>
+                    <div class="basket-dish" id="basket">
+                    
+                    </div>  
+                    <div id="basket-footer">
+
+                    </div>  
+                </div>
+                <div class="bg-container">
+                    <div class="nav-container">
+                        <div class="nav-logo">
+                            <img src="./assets/img/pizza-155771_1280.png" alt="pizza">
+                        </div>
+                        <div class="nav-information">
+                            <h2>Pizzaparadies</h2>
+                            <span>Bewertung (4,2 von 5 Sternen)</span>
+                        </div>
+                        <div class="nav-content">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD8100"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>
+                            <a onclick="renderDishes('Hauptgericht')"" href="#">Hauptgerichte</a>
+                            <a onclick="renderInsertsDishes()" href="#">Beilagen</a>
+                            <a onclick="renderDessertsDishes()" href="#">Nachspeisen</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dish-container" id="display-dish">
+                
+            </div>
+        </div>
+        <div class="footer-container">
+
+        </div>
+    </div>
 </body>
 </html>

@@ -1,0 +1,30 @@
+.dish {
+    border: 2px solid #EAEAEA;
+    margin: 12px;
+    cursor: pointer;
+}
+.dish:hover {
+    background-color: #FEE5CB;
+}
+.dish-container {
+    margin: 12px;
+    width: calc(100% - 324px);
+}
+.dish-container-information {
+    display: flex;
+    justify-content: space-between;
+}
+.dish-information {
+    margin-left: 12px;
+}
+.dish-information span {
+    margin-left: 0;
+}
+.dish-information p {
+    color: #FF8000;;
+}
+.add-dish {
+    border-left: 1px solid #EAEAEA;
+    border-bottom: 1px solid #EAEAEA;
+    margin-bottom: auto;
+}

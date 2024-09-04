@@ -1,0 +1,68 @@
+header {
+    background-color: #FF8000;
+}
+.header-container {
+    max-width: 1920px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+}
+.header-container img {
+    width: 156px;
+}
+.home-container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.bg-container {
+    background-image: url('../assets/img/pexels-narda-yescas-724842-1566837.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    object-fit: cover;
+    height: 50vh;
+    width: calc(100% - 300px);
+}
+.nav-container {
+    width: 100%;
+    padding-top: 136px;
+}
+.nav-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -64px;
+}
+.nav-logo img {
+    background-color: white;
+    object-fit: cover;
+    height: 128px;
+    width: 128px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+}
+.nav-information {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.nav-information h2, span {
+    margin-left: 12px;
+}
+.nav-container span {
+    color: #FF8000;
+    padding-bottom: 12px;
+}
+.nav-content {
+    background-color: #F7F6F1;
+    padding: 12px 0px 12px 0px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-content svg {
+    margin-left: 12px;
+}
+.nav-content a {
+    color: #8F9293;
+}
