@@ -1,40 +1,17 @@
 
 function init() {
-    renderDishes();
+    renderDishes('Hauptgerichte');
     renderClearBasket();
+    currentYear();
 }
 
-function renderDishes() {
+function renderDishes(dish) {
     let dishRef = document.getElementById('display-dish');
     dishRef.innerHTML = "";
-    dishRef.innerHTML = getMainDishHeadline();
+    dishRef.innerHTML = getDishHeadline(dish);
 
     for (let indexDish = 0; indexDish < allDishes.length; indexDish++) {
-        if(allDishes[indexDish].direction == "Hauptgericht") {
-            dishRef.innerHTML += getDishes(indexDish);
-        }
-    }
-}
-
-function renderInsertsDishes() {
-    let dishRef = document.getElementById('display-dish');
-    dishRef.innerHTML = "";
-    dishRef.innerHTML = getInsertsDishHeadline();
-
-    for (let indexDish = 0; indexDish < allDishes.length; indexDish++) {
-        if(allDishes[indexDish].direction == "Beilage") {
-            dishRef.innerHTML += getDishes(indexDish);
-        }
-    }
-}
-
-function renderDessertsDishes() {
-    let dishRef = document.getElementById('display-dish');
-    dishRef.innerHTML = "";
-    dishRef.innerHTML = getDessertDishHeadline();
-
-    for (let indexDish = 0; indexDish < allDishes.length; indexDish++) {
-        if(allDishes[indexDish].direction == "Nachspeise") {
+        if(allDishes[indexDish].direction == dish) {
             dishRef.innerHTML += getDishes(indexDish);
         }
     }
@@ -47,14 +24,12 @@ function renderClearBasket() {
     basketFooterRef = document.getElementById('basket-footer');
     basketFooterRef.innerHTML = "";
 
-
-    for (let indexDish = 0; indexDish < allDishes.length; indexDish++) {
-        if(allDishes[indexDish].quantity == 0) {
-            basketRef.innerHTML = getClearBasket();
-            basketFooterRef.innerHTML = "";
-        } else {
-            renderBasket();
-        }
+    let allQuantitiesAreZero = allDishes.every(dish => dish.quantity === 0);
+    if(allQuantitiesAreZero) {
+        basketRef.innerHTML = getClearBasket();
+        basketFooterRef.innerHTML = "";
+    } else {
+        renderBasket();
     }
 }
 
@@ -69,9 +44,6 @@ function renderBasket() {
         if(allDishes[indexDish].quantity > 0) {
             basketRef.innerHTML += getBasket(indexDish);
             basketFooterRef.innerHTML = getBasketFooter(indexDish);
-
-            calculateSubtotalBasket();
-            calculateSumBasket();
         }
     }
 }
@@ -83,46 +55,28 @@ function addToBasket(indexDish) {
 }
 
 function removeFromBasket(indexDish) {
-    if(allDishes[indexDish].quantity > 0) {
-        allDishes[indexDish].quantity--;
-        if(allDishes[indexDish].quantity == 0) {
-            renderClearBasket();
-        } else {
-            renderBasket();
-        }
-    }
+    allDishes[indexDish].quantity--;
+    renderClearBasket();
 }
 
 function deleteFromBasket(indexDish) {
     allDishes[indexDish].quantity = 0;
-
-    renderClearBasket()
+    renderClearBasket();
 }
 
-function calculateSubtotalBasket(indexDish) {
-    let subtotal;
+function calculateSum(x) {
+    let totalSum = 0;
 
-    for (let indexDish = 0; indexDish < allDishes.length; indexDish++) {
-        if(allDishes[indexDish].quantity > 0) {
-            let price = allDishes[indexDish].price;
-            let quantity = allDishes[indexDish].quantity;
+    for (let index = 0; index < allDishes.length; index++) {
+        let amount = allDishes[index].quantity;
+        let price = allDishes[index].price;
+        let sum = amount * price;
 
-            subtotal = (price * quantity).toFixed(2);
-            return subtotal;
-        }
+        totalSum += sum
     }
+    return (totalSum + x).toFixed(2);
 }
 
-function calculateSumBasket() {
-    let sum;
-
-    for (let indexDish = 0; indexDish < allDishes.length; indexDish++) {
-        if(allDishes[indexDish].quantity > 0) {
-            let price = allDishes[indexDish].price;
-            let quantity = allDishes[indexDish].quantity;
-
-            sum = (price * quantity + 5).toFixed(2);
-            return sum;
-        }
-    }
+function currentYear() {
+    document.getElementById('current-year').innerHTML = new Date().getFullYear();
 }

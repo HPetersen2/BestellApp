@@ -3,6 +3,7 @@ header {
 }
 .header-container {
     max-width: 1920px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,6 +15,8 @@ header {
 .home-container {
     display: flex;
     flex-direction: row-reverse;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 .bg-container {
     background-image: url('../assets/img/pexels-narda-yescas-724842-1566837.jpg');
@@ -65,4 +68,19 @@ header {
 }
 .nav-content a {
     color: #8F9293;
+}
+footer {
+    background-color: #FF8000;
+    height: 64px;
+    width: 100%;
+}
+.footer-content {
+    margin: 0 auto;
+    max-width: 1920px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-container img {
+    width: 48px;
 }

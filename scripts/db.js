@@ -1,62 +1,62 @@
 let allDishes = [
     {
-        "direction" : "Hauptgericht",
+        "direction" : "Hauptgerichte",
         "title" : "Pizza Margherita",
         "description" : "mit Mozzarella und frischem Basilikum",
         "price" : 5.90,
         "quantity" : 0
     },
     {
-        "direction" : "Hauptgericht",
+        "direction" : "Hauptgerichte",
         "title" : "Pizza Salami",
         "description" : "mit pikanter Salami und Mozzarella",
         "price" : 6.90,
         "quantity" : 0
     },
     {
-        "direction" : "Hauptgericht",
+        "direction" : "Hauptgerichte",
         "title" : "Pizza Funghi",
         "description" : "mit frischen Champignons und Mozzarella",
         "price" : 6.50,
         "quantity" : 0
     },
     {
-        "direction" : "Hauptgericht",
+        "direction" : "Hauptgerichte",
         "title" : "Pizza Quattro Formaggi",
         "description" : "mit vier verschiedenen Käsesorten",
         "price" : 7.50,
         "quantity" : 0
     },
     {
-        "direction" : "Hauptgericht",
+        "direction" : "Hauptgerichte",
         "title" : "Pizza Hawaii",
         "description" : "mit Schinken, Ananas und Mozzarella",
         "price" : 7.00,
         "quantity" : 0
     },
     {
-        "direction" : "Hauptgericht",
+        "direction" : "Hauptgerichte",
         "title" : "Pizza Diavolo",
         "description" : "mit scharfer Peperoniwurst und Chili",
         "price" : 7.50,
         "quantity" : 0
     },
     {
-        "direction" : "Beilage",
+        "direction" : "Beilagen",
         "title" : "Knoblauchbrot",
         "description" : "mit hausgemachter Kräuterbutter",
         "price" : 2.90,
         "quantity" : 0
     },
     {
-        "direction" : "Beilage",
+        "direction" : "Beilagen",
         "title" : "Bruschetta",
         "description" : "mit Tomaten, Knoblauch und Basilikum",
         "price" : 3.50,
         "quantity" : 0
     },
     {
-        "direction" : "Beilage",
+        "direction" : "Beilagen",
         "title" : "Gemischter Salat",
         "description" : "mit Essig-Öl-Dressing",
         "price" : 3.90,

@@ -16,21 +16,9 @@ function getDishes(indexDish) {
     `
 }
 
-function getMainDishHeadline() {
+function getDishHeadline(dish) {
     return `
-        <h3>Hauptgerichte</h3>
-    `
-}
-
-function getInsertsDishHeadline() {
-    return `
-        <h3>Beilagen</h3>
-    `
-}
-
-function getDessertDishHeadline() {
-    return `
-        <h3>Nachspeisen</h3>
+        <h3>${dish}</h3>
     `
 }
 
@@ -47,13 +35,13 @@ function getBasket(indexDish) {
     `
 }
 
-function getBasketFooter(indexDish) {
+function getBasketFooter() {
     return `
     <div class="basket-footer">
         <table class="basket-footer-text">
             <tr>
                 <td>Zwischensumme:</td>
-                <td class="basket-table-right">${calculateSubtotalBasket()} €</td>
+                <td class="basket-table-right">${calculateSum(0)} €</td>
             </tr>
             <tr>
                 <td>Lieferkosten:</td>
@@ -61,7 +49,7 @@ function getBasketFooter(indexDish) {
             </tr>
             <tr class="basket-footer-total-cost">
                 <td><b>Gesamt:</b></td>
-                <td class="basket-table-right"><b>${calculateSumBasket()} €</b></td>
+                <td class="basket-table-right"><b>${calculateSum(5)} €</b></td>
             </tr>
         </table>
     </div>

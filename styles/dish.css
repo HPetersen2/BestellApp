@@ -9,6 +9,8 @@
 .dish-container {
     margin: 12px;
     width: calc(100% - 324px);
+    padding-bottom: 48px;
+    flex: 1;
 }
 .dish-container-information {
     display: flex;
