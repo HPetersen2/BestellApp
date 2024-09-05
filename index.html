@@ -23,52 +23,56 @@
         </header>
         <main>
             <section>
-                <div class="home-container">
-                    <div class="basket">
-                        <div class="basket-container">
-                            <div class="basket-headline">
-                                <h2>Warenkorb</h2>
+                <div class="home-container" id="home">
+                        <div class="basket" id="basket-total">
+                            <div class="basket-container">
+                                <div class="basket-headline">
+                                    <h2>Warenkorb</h2>
+                                </div>
+                                <div class="basket-dish" id="basket">
+                                
+                                </div>  
+                                <div id="basket-footer">
+            
+                                </div>  
                             </div>
-                            <div class="basket-dish" id="basket">
-                            
-                            </div>  
-                            <div id="basket-footer">
-        
-                            </div>  
-                        </div>
                     </div>
-                    <div class="bg-container">
-                        <div class="nav-container">
-                            <div class="nav-logo">
-                                <img src="./assets/img/pizza-155771_1280.png" alt="pizza">
-                            </div>
-                            <div class="nav-information">
-                                <h2>Pizzaparadies</h2>
-                                <span>Bewertung (4,2 von 5 Sternen)</span>
-                            </div>
-                            <div class="nav-content">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD8100"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>
-                                <a onclick="renderDishes('Hauptgerichte')"" href="#">Hauptgerichte</a>
-                                <a onclick="renderDishes('Beilagen')" href="#">Beilagen</a>
-                                <a onclick="renderDishes('Nachspeise')" href="#">Nachspeisen</a>
-                            </div>
+                    <div class="nav-container" id="nav-container">
+                        <div class="nav-logo">
+                            <img src="./assets/img/pizza-155771_1280.png" alt="pizza">
+                        </div>
+                        <div class="nav-information">
+                            <h2>Pizzaparadies</h2>
+                            <span>Bewertung (4,2 von 5 Sternen)</span>
+                        </div>
+                        <div class="nav-content">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD8100"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>
+                            <a onclick="renderDishes('Hauptgerichte')"" href="#">Hauptgerichte</a>
+                            <a onclick="renderDishes('Beilagen')" href="#">Beilagen</a>
+                            <a onclick="renderDishes('Nachspeise')" href="#">Nachspeisen</a>
                         </div>
                     </div>
             </div>
             </section>
             <section>
-                <div class="dish-container" id="display-dish">
+                <div class="main-container">
+                    
+                    <div class="dish-container" id="display-dish">
                 
+                    </div>
+                    <button onclick="showMobileBasket()">Warenkorb</button>
                 </div>
-                    <button>Warenkorb</button>
             </section>
         </main>
-        <footer>
-            <div class="footer-container">
-                    <img src="./assets/fav/android-chrome-192x192.png" alt="fav">
-                    <p>&#169<span id="current-year"></span> BestellApp. Alle Rechte vorbehalten.</p>
-                </div>
-        </footer>
     </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <img src="./assets/fav/android-chrome-192x192.png" alt="fav">
+                <p>&#169;<span id="current-year"></span> BestellApp. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+    
 </body>
 </html>

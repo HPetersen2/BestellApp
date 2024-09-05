@@ -1,9 +1,20 @@
-.basket-container {
+.basket {
     width: 300px;
+    min-height: 100vh;
+}
+.basket-container {
+    width: 100%;
     display: flex;
     flex-grow: 1;
     flex-direction: column;
     box-shadow: 2px 2px #EAEAEA;
+    position: sticky;
+    top: 0;
+}
+.basket-headline {
+    text-align: center;
+    width: 100%;
+    border: 2px solid #EAEAEA;
 }
 .basket-headline {
     text-align: center;
@@ -45,7 +56,14 @@
 }
 
 @media(max-width: 650px) {
-    .basket-container {
+    .basket {
         display: none;
+    }
+}
+
+@media(min-width: 650px) {
+    .basket {
+        display: block;
+        width: 300px !important;
     }
 }

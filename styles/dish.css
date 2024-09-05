@@ -10,7 +10,6 @@
     margin: 12px;
     width: calc(100% - 324px);
     padding-bottom: 48px;
-    flex: 1;
 }
 .dish-container-information {
     display: flex;
@@ -29,4 +28,17 @@
     border-left: 1px solid #EAEAEA;
     border-bottom: 1px solid #EAEAEA;
     margin-bottom: auto;
+}
+
+@media(max-width: 650px) {
+    .dish-container {
+        margin: 0;
+        width: 100% !important;
+    }
+}
+
+@media(min-width: 651px) {
+    .dish-container {
+        display: block;
+    }
 }

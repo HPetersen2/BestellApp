@@ -64,3 +64,8 @@ function getClearBasket() {
     </div>
     `
 }
+
+function getTest() {
+    return `
+    <h1>ICh bin ein Test hole mich hieraus!</h1>`
+}

@@ -12,23 +12,26 @@ header {
 .header-container img {
     width: 156px;
 }
+.content {
+    flex: 1;
+}
+.main-container {
+    max-width: 1920px;
+    margin: 0 auto;
+}
 .home-container {
     display: flex;
     flex-direction: row-reverse;
     max-width: 1920px;
     margin: 0 auto;
+    height: 400px;
 }
-.bg-container {
+.nav-container {
     background-image: url('../assets/img/pexels-narda-yescas-724842-1566837.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    aspect-ratio: 1 / 1;
     object-fit: cover;
-    height: 50vh;
     width: calc(100% - 300px);
-}
-.nav-container {
-    width: 100%;
     padding-top: 136px;
 }
 .nav-logo {
@@ -72,12 +75,12 @@ header {
 button {
     display: none;
 }
-footer {
+.footer-container {
     background-color: #FF8000;
     height: 64px;
     width: 100%;
 }
-.footer-container {
+.footer-content {
     margin: 0 auto;
     max-width: 1920px;
     display: flex;
@@ -88,6 +91,18 @@ footer {
     width: 48px;
 }
 
+
+@media(max-width: 750px) {
+    .nav-logo img {
+        height: 96px;
+        width: 96px;
+    }
+}
+@media(max-width: 700px) {
+    .nav-logo {
+        display: none;
+    }
+}
 @media(max-width: 650px) {
     button {
         display: block;
@@ -96,34 +111,28 @@ footer {
         color: white;
         font-size: large;
         margin-bottom: 12px;
-        margin-left: 12px;
         height: 48px;
-        width: 322px;
+        width: 100%;
+    }
+    .nav-container {
+        width: 100%;
     }
 }
-@media(max-width: 630px) {
-    button {
-        display: block;
-        background-color: #096DD4;
-        border: none;
-        color: white;
-        font-size: large;
-        margin-bottom: 12px;
-        margin-left: 12px;
-        height: 48px;
-        width: 222px;
+
+@media(min-width: 650px) {
+    #nav-container {
+        display: block
     }
 }
-@media(max-width: 546px) {
-    button {
-        display: block;
-        background-color: #096DD4;
-        border: none;
-        color: white;
-        font-size: large;
-        margin-bottom: 12px;
-        margin-left: 12px;
-        height: 48px;
-        width: 122px;
-    }
+
+.d_none {
+    display: none;
+}
+
+.show {
+    display: block !important;
+    width: 100% !important;
+}
+.changeHome {
+    min-height: 100vh;
 }

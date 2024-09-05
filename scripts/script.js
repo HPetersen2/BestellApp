@@ -21,7 +21,7 @@ function renderClearBasket() {
     let basketRef = document.getElementById('basket');
     basketRef.innerHTML = "";
 
-    basketFooterRef = document.getElementById('basket-footer');
+    let basketFooterRef = document.getElementById('basket-footer');
     basketFooterRef.innerHTML = "";
 
     let allQuantitiesAreZero = allDishes.every(dish => dish.quantity === 0);
@@ -37,13 +37,13 @@ function renderBasket() {
     let basketRef = document.getElementById('basket');
     basketRef.innerHTML = "";
 
-    basketFooterRef = document.getElementById('basket-footer');
+    let basketFooterRef = document.getElementById('basket-footer');
     basketFooterRef.innerHTML = "";
 
     for (let indexDish = 0; indexDish < allDishes.length; indexDish++) {
         if(allDishes[indexDish].quantity > 0) {
             basketRef.innerHTML += getBasket(indexDish);
-            basketFooterRef.innerHTML = getBasketFooter(indexDish);
+            basketFooterRef.innerHTML = getBasketFooter();
         }
     }
 }
@@ -75,6 +75,16 @@ function calculateSum(x) {
         totalSum += sum
     }
     return (totalSum + x).toFixed(2);
+}
+
+let classBasket = 'd_none'
+
+function showMobileBasket() {
+    document.getElementById('nav-container').classList.toggle('d_none');
+    document.getElementById('display-dish').classList.toggle('d_none');
+
+    document.getElementById('basket-total').classList.toggle('show');
+    document.getElementById('home').classList.toggle('changeHome');
 }
 
 function currentYear() {
