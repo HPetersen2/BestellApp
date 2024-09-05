@@ -52,6 +52,9 @@ function getBasketFooter() {
                 <td class="basket-table-right"><b>${calculateSum(5)} €</b></td>
             </tr>
         </table>
+        <div class="order-button">
+            <a onclick="order()" href="#">Bestellen</a>
+        </div>
     </div>
     `
 }
@@ -63,9 +66,4 @@ function getClearBasket() {
         <p>Wähle leckere Gerichte aus der Karte und bestelle dein Menü.</p>
     </div>
     `
-}
-
-function getTest() {
-    return `
-    <h1>ICh bin ein Test hole mich hieraus!</h1>`
 }

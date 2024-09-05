@@ -77,7 +77,21 @@ function calculateSum(x) {
     return (totalSum + x).toFixed(2);
 }
 
-let classBasket = 'd_none'
+function order() {
+    for (let index = 0; index < allDishes.length; index++) {
+        allDishes[index].quantity = 0;
+    }
+
+    document.getElementById('popup').classList.remove('popup');
+    document.getElementById('popup').classList.add('popup_open');
+
+    renderClearBasket();
+}
+
+function closePopUp() {
+    document.getElementById('popup').classList.remove('popup_open');
+    document.getElementById('popup').classList.add('popup');
+}
 
 function showMobileBasket() {
     document.getElementById('nav-container').classList.toggle('d_none');
