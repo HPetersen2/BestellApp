@@ -13,7 +13,12 @@ header {
     width: 156px;
 }
 .content {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.main {
+    flex-grow: 1;
 }
 .main-container {
     max-width: 1920px;
@@ -75,17 +80,20 @@ header {
 button {
     display: none;
 }
-.footer-container {
-    background-color: #FF8000;
-    height: 64px;
+footer {
     width: 100%;
-}
-.footer-content {
+    position: relative;
+    bottom: 0;
     margin: 0 auto;
     max-width: 1920px;
+    background-color: #FF8000;
+}
+.footer-container {
+    height: 64px;
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
 .footer-container img {
     width: 48px;

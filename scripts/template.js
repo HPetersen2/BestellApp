@@ -26,11 +26,11 @@ function getBasket(indexDish) {
     return `
         <h4>${allDishes[indexDish].title}</h4>
         <div class="basket-dish-information">
-            <a onclick="removeFromBasket(${indexDish})" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD8100"><path d="M200-440v-80h560v80H200Z"/></svg></a>
+            <button onclick="removeFromBasket(${indexDish})"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD8100"><path d="M200-440v-80h560v80H200Z"/></svg></button>
             <p>${allDishes[indexDish].quantity} x</p>
-            <a onclick="addToBasket(${indexDish})" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD8100"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg></a>
+            <button onclick="addToBasket(${indexDish})"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD8100"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg></button>
             <p>${(allDishes[indexDish].quantity * allDishes[indexDish].price).toFixed(2)} €</p>
-            <a onclick="deleteFromBasket(${indexDish})" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD8100"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg></a>
+            <button onclick="deleteFromBasket(${indexDish})"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD8100"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg></button>
         </div>
     `
 }
@@ -53,7 +53,7 @@ function getBasketFooter() {
             </tr>
         </table>
         <div class="order-button">
-            <a onclick="order()" href="#">Bestellen</a>
+            <button class="order-btn" onclick="order()">Bestellen</button>
         </div>
     </div>
     `

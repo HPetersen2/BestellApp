@@ -1,9 +1,19 @@
 
 function init() {
-    renderDishes('Hauptgerichte');
+    renderallDishes();
     renderClearBasket();
     currentYear();
 }
+
+function renderallDishes() {
+    let dishRef = document.getElementById('display-dish');
+    dishRef.innerHTML = "";
+    dishRef.innerHTML = getDishHeadline('Alle Gerichte');
+
+    for (let indexDish = 0; indexDish < allDishes.length; indexDish++) {
+            dishRef.innerHTML += getDishes(indexDish);
+        }
+    }
 
 function renderDishes(dish) {
     let dishRef = document.getElementById('display-dish');

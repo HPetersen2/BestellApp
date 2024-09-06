@@ -26,12 +26,14 @@
                 <div class="home-container" id="home">
                         <div class="basket" id="basket-total">
                             <div class="basket-container">
-                                <div class="basket-headline">
-                                    <h2>Warenkorb</h2>
+                                <div class="basket-scroll">
+                                    <div class="basket-headline">
+                                        <h2>Warenkorb</h2>
+                                    </div>
+                                    <div class="basket-dish" id="basket">
+                                    
+                                    </div>  
                                 </div>
-                                <div class="basket-dish" id="basket">
-                                
-                                </div>  
                                 <div id="basket-footer">
 
                                 </div>  
@@ -47,6 +49,7 @@
                         </div>
                         <div class="nav-content">
                             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FD8100"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>
+                            <a onclick="renderallDishes()" href="#">Alle Gerichte</a>
                             <a onclick="renderDishes('Hauptgerichte')"" href="#">Hauptgerichte</a>
                             <a onclick="renderDishes('Beilagen')" href="#">Beilagen</a>
                             <a onclick="renderDishes('Nachspeise')" href="#">Nachspeisen</a>
@@ -74,10 +77,12 @@
     </div>
     <footer>
         <div class="footer-container">
-            <div class="footer-content">
-                <img src="./assets/fav/android-chrome-192x192.png" alt="fav">
-                <p>&#169;<span id="current-year"></span> BestellApp. Alle Rechte vorbehalten.</p>
-            </div>
+                <div>
+                    <img src="./assets/fav/android-chrome-192x192.png" alt="fav">
+                </div>
+                <div>
+                    <p>&#169;<span id="current-year"></span> BestellApp. Alle Rechte vorbehalten.</p>
+                </div>
         </div>
     </footer>
     
